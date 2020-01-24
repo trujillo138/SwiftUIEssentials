@@ -138,8 +138,7 @@
 				2B7DC12623D8B81F0096B703 /* SelectedImageView.swift */,
 				2B08A38F23D6507000E491F1 /* OrderView */,
 				2B08A38E23D6506700E491F1 /* MenuView */,
-				2B08A38D23D6506100E491F1 /* Model */,
-				2B08A38C23D6505A00E491F1 /* HistoryView */,
+				40B81FAD23DB2C1A00A4EF1B /* Model */,
 				2B08A35C23D6468A00E491F1 /* AppDelegate.swift */,
 				2B08A35E23D6468A00E491F1 /* SceneDelegate.swift */,
 				2B08A36223D6468C00E491F1 /* Assets.xcassets */,
@@ -214,6 +213,20 @@
 				2B54E86623D798F900737B43 /* OrderRowView.swift */,
 			);
 			path = OrderView;
+			sourceTree = "<group>";
+		};
+		40B81FAC23DB2C0D00A4EF1B /* HistoryView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HistoryView;
+			sourceTree = "<group>";
+		};
+		40B81FAD23DB2C1A00A4EF1B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
