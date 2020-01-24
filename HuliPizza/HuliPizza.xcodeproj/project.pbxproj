@@ -105,10 +105,10 @@
 		2B08A35B23D6468A00E491F1 /* HuliPizza */ = {
 			isa = PBXGroup;
 			children = (
+				40B81FAC23DB2C0D00A4EF1B /* HistoryView */,
 				2B08A38F23D6507000E491F1 /* OrderView */,
 				2B08A38E23D6506700E491F1 /* MenuView */,
-				2B08A38D23D6506100E491F1 /* Model */,
-				2B08A38C23D6505A00E491F1 /* HistoryView */,
+				40B81FAD23DB2C1A00A4EF1B /* Model */,
 				2B08A35C23D6468A00E491F1 /* AppDelegate.swift */,
 				2B08A35E23D6468A00E491F1 /* SceneDelegate.swift */,
 				2B08A39423D6516200E491F1 /* ContentHeaderView.swift */,
@@ -147,20 +147,6 @@
 			path = HuliPizzaUITests;
 			sourceTree = "<group>";
 		};
-		2B08A38C23D6505A00E491F1 /* HistoryView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HistoryView;
-			sourceTree = "<group>";
-		};
-		2B08A38D23D6506100E491F1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		2B08A38E23D6506700E491F1 /* MenuView */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +161,20 @@
 				2B08A39023D6509F00E491F1 /* OrderListView.swift */,
 			);
 			path = OrderView;
+			sourceTree = "<group>";
+		};
+		40B81FAC23DB2C0D00A4EF1B /* HistoryView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HistoryView;
+			sourceTree = "<group>";
+		};
+		40B81FAD23DB2C1A00A4EF1B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
