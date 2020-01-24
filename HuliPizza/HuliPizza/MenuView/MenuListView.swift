@@ -9,22 +9,19 @@
 import SwiftUI
 
 struct MenuListView: View {
+    @Binding var orderModel: OrderModel
+    var menuList = MenuModel().menu
     var body: some View {
         VStack {
-            Text("Menu")
-            List(0 ..< 5) { item in
-                HStack(alignment: .top, spacing: 15) {
-                    Image("1_100w")
-                    VStack {
-                        Text("Huli Chicken Pizza")
-                        HStack {
-                            ForEach(0 ..< 4) { item2 in
-                                Image("Pizza Slice")
-                            }
-                        }
+            ListHeaderView(name: "Menu")
+            NavigationView {
+                List(menuList) { item in
+                    NavigationLink(destination: MenuDetailView(orderModel: self.$orderModel, menuItem: item)) {
+                        MenuRowView(menuItem: item)
+                            .listRowInsets(EdgeInsets())
                     }
-                    Spacer()
                 }
+            .navigationBarTitle("Pizza Order")
             }
         }
     }
@@ -32,6 +29,6 @@ struct MenuListView: View {
 
 struct MenuListView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuListView()
+        MenuListView(orderModel: .constant(OrderModel()))
     }
 }

@@ -9,15 +9,12 @@
 import SwiftUI
 
 struct OrderListView: View {
+    var orderModel: OrderModel
     var body: some View {
         VStack {
-            Text("You Order")
-            List(0 ..< 5) { item in
-                HStack(alignment: .firstTextBaseline) {
-                    Text("Your order item here")
-                    Spacer()
-                    Text("$0.00")
-                }
+            ListHeaderView(name: "You Order")
+            List(orderModel.orders) { item in
+                OrderRowView(orderItem: item)
             }
         }
     }
@@ -25,6 +22,6 @@ struct OrderListView: View {
 
 struct OrderListView_Previews: PreviewProvider {
     static var previews: some View {
-        OrderListView()
+        OrderListView(orderModel: OrderModel())
     }
 }
