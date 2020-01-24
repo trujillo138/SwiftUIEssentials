@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct OrderListView: View {
-    var orderModel: OrderModel
+    @ObservedObject var orderModel: OrderModel
     var body: some View {
         VStack {
-            ListHeaderView(name: "You Order")
+            ListHeaderView(orderModel: orderModel, name: "You Order")
             List(orderModel.orders) { item in
                 OrderRowView(orderItem: item)
             }

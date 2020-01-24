@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ListHeaderView: View {
+    @ObservedObject var orderModel: OrderModel
     let name: String
     var body: some View {
         HStack {
@@ -16,12 +17,18 @@ struct ListHeaderView: View {
                 .padding(.leading, 5)
                 .foregroundColor(Color("G2"))
             Spacer()
-        }.background(Color("G4"))
+            Text(orderModel.formattedTotal)
+                .fontWeight(.heavy)
+                .padding(.trailing)
+                
+            }.foregroundColor(Color("G1"))
+        .background(Color("G4"))
+        
     }
 }
 
 struct ListHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        ListHeaderView(name: "Some name")
+        ListHeaderView(orderModel: OrderModel(), name: "Some name")
     }
 }
