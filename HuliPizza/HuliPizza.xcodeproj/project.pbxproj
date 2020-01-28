@@ -24,6 +24,9 @@
 		2B54E86D23D799EF00737B43 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B54E86C23D799EF00737B43 /* PageTitleView.swift */; };
 		2B54E87523D79E8900737B43 /* ListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B54E87423D79E8900737B43 /* ListHeaderView.swift */; };
 		2B7DC12723D8B81F0096B703 /* SelectedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7DC12623D8B81F0096B703 /* SelectedImageView.swift */; };
+		2BD457C523E0DA390038D563 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD457C423E0DA390038D563 /* MapViewController.swift */; };
+		2BD457C723E0DA560038D563 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD457C623E0DA560038D563 /* MapView.swift */; };
+		2BD457D823E0DC660038D563 /* CloseUpMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD457D723E0DC660038D563 /* CloseUpMapView.swift */; };
 		2BE1AC6F23DB926A001717B9 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE1AC6923DB926A001717B9 /* OrderModel.swift */; };
 		2BE1AC7023DB926A001717B9 /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE1AC6A23DB926A001717B9 /* HistoryModel.swift */; };
 		2BE1AC7123DB926A001717B9 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE1AC6B23DB926A001717B9 /* MenuModel.swift */; };
@@ -80,6 +83,9 @@
 		2B54E87223D79CFB00737B43 /* HistoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListView.swift; sourceTree = "<group>"; };
 		2B54E87423D79E8900737B43 /* ListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderView.swift; sourceTree = "<group>"; };
 		2B7DC12623D8B81F0096B703 /* SelectedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedImageView.swift; sourceTree = "<group>"; };
+		2BD457C423E0DA390038D563 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		2BD457C623E0DA560038D563 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		2BD457D723E0DC660038D563 /* CloseUpMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseUpMapView.swift; sourceTree = "<group>"; };
 		2BE1AC6923DB926A001717B9 /* OrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		2BE1AC6A23DB926A001717B9 /* HistoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
 		2BE1AC6B23DB926A001717B9 /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
@@ -237,6 +243,9 @@
 		2BE1AC7623DB93AC001717B9 /* HistoryView */ = {
 			isa = PBXGroup;
 			children = (
+				2BD457D723E0DC660038D563 /* CloseUpMapView.swift */,
+				2BD457C423E0DA390038D563 /* MapViewController.swift */,
+				2BD457C623E0DA560038D563 /* MapView.swift */,
 				2BE1AC7723DB93AC001717B9 /* HistoryRowView.swift */,
 				2BE1AC7823DB93AC001717B9 /* ItemDetailView.swift */,
 				2BE1AC7923DB93AC001717B9 /* HistoryView.swift */,
@@ -377,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B08A35D23D6468A00E491F1 /* AppDelegate.swift in Sources */,
+				2BD457C723E0DA560038D563 /* MapView.swift in Sources */,
 				2BE1AC7523DB92F8001717B9 /* MenuDetailView.swift in Sources */,
 				2BE1AC7123DB926A001717B9 /* MenuModel.swift in Sources */,
 				2B08A39323D6510500E491F1 /* MenuListView.swift in Sources */,
@@ -385,6 +395,7 @@
 				2B08A39123D6509F00E491F1 /* OrderListView.swift in Sources */,
 				2BE1AC8023DB940A001717B9 /* RootTabView.swift in Sources */,
 				2B08A39523D6516200E491F1 /* ContentHeaderView.swift in Sources */,
+				2BD457C523E0DA390038D563 /* MapViewController.swift in Sources */,
 				2B54E86B23D7995C00737B43 /* RatingsView.swift in Sources */,
 				2BE1AC7B23DB93AC001717B9 /* HistoryRowView.swift in Sources */,
 				2B7DC12723D8B81F0096B703 /* SelectedImageView.swift in Sources */,
@@ -392,6 +403,7 @@
 				2B54E87523D79E8900737B43 /* ListHeaderView.swift in Sources */,
 				2BE1AC7D23DB93AC001717B9 /* HistoryView.swift in Sources */,
 				2BE1AC7C23DB93AC001717B9 /* ItemDetailView.swift in Sources */,
+				2BD457D823E0DC660038D563 /* CloseUpMapView.swift in Sources */,
 				2BE1AC7023DB926A001717B9 /* HistoryModel.swift in Sources */,
 				2B54E86923D7992A00737B43 /* MenuRowView.swift in Sources */,
 				2B08A35F23D6468A00E491F1 /* SceneDelegate.swift in Sources */,

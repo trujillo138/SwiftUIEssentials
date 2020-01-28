@@ -13,7 +13,6 @@ struct HistoryView: View {
   var historyModel: HistoryModel
   var body: some View {
     VStack {
-      ContentHeaderView()
       PageTitleView(title:"Pizza History")
       SelectedImageView(image: "\(selectedImageID)_250w")
         .padding(5)

@@ -11,7 +11,7 @@ import Combine
 
 
 ///  A type for size of pizzas with a mutiplier to the price as a raw value.
-enum Size:Double{
+enum Size: Double, CaseIterable {
   case small = 1.0
   case medium = 1.25
   case large = 1.50

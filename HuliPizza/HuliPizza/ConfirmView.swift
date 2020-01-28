@@ -12,6 +12,9 @@ struct ConfirmView: View {
     var menuID:Int
     @Binding var isPresented: Bool
     @ObservedObject var orderModel:OrderModel
+    @Binding var quantity: Int
+    @Binding var size: Size
+    @State var comments: String = ""
     
     ///extracts the menu item name based on `menuID`
     var name:String{
@@ -19,7 +22,7 @@ struct ConfirmView: View {
     }
     
     func addItem(){
-        orderModel.add(menuID: menuID)
+        orderModel.add(menuID: menuID, size: size, quantity: quantity, comments: comments)
         isPresented = false
     }
     
@@ -32,17 +35,40 @@ struct ConfirmView: View {
             Divider()
             SelectedImageView(image: "\(menuID)_250w")
                 .padding(10)
+//                .onTapGesture(count: 2) {
+//                    self.isPresented = false
+//            }
+                .gesture(
+                    TapGesture(count: 2)
+                        .onEnded {
+                            self.isPresented = false
+                    }
+            )
             Divider()
-            Text("Confirm your order of \(name) pizza")
+            Text("Confirm your order of \(quantity) \(size.formatted()) \(name) pizza")
                 .font(.headline)
-            Spacer()
-            Button(action: addItem){
-                Text("Add")
-                    .font(.title)
-                .padding()
+            TextField("Add your comments here", text: $comments)
                 .background(Color("G4"))
-                .cornerRadius(10)
-            }.padding([.bottom])
+            SizePickerView(size: $size)
+            QuantityStepperView(quantity: $quantity)
+            Spacer()
+            HStack {
+                Button(action: addItem){
+                    Text("Add")
+                        .font(.title)
+                    .padding()
+                    .background(Color("G4"))
+                    .cornerRadius(10)
+                }
+                Spacer()
+                Button(action: { self.isPresented = false }){
+                    Text("Cancel")
+                        .font(.title)
+                    .padding()
+                    .background(Color("G4"))
+                    .cornerRadius(10)
+                }
+            }.padding([.bottom, .leading, .trailing])
         }
         .background(Color("G3"))
         .foregroundColor(Color("IP"))
@@ -52,6 +78,6 @@ struct ConfirmView: View {
 
 struct ConfirmView_Previews: PreviewProvider {
     static var previews: some View {
-        ConfirmView(menuID: 0, isPresented: .constant(true), orderModel: OrderModel())
+        ConfirmView(menuID: 0, isPresented: .constant(true), orderModel: OrderModel(), quantity: .constant(1), size: .constant(.medium))
     }
 }

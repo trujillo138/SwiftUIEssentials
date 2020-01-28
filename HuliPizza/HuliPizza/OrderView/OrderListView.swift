@@ -12,11 +12,21 @@ struct OrderListView: View {
     @ObservedObject var orderModel: OrderModel
     var body: some View {
         VStack {
-            ListHeaderView(orderModel: orderModel, name: "You Order")
-            List(orderModel.orders) { item in
-                OrderRowView(orderItem: item)
+            List {
+                Section(
+                    header: ListHeaderView(orderModel: self.orderModel, name: "You Order")
+                ) {
+                    ForEach(orderModel.orders) { item in
+                        OrderRowView(orderItem: item)
+                    }
+                .onDelete(perform: delete)
+                }
             }
         }
+    }
+    
+    func delete(at offsets: IndexSet) {
+        orderModel.orders.remove(atOffsets: offsets)
     }
 }
 
